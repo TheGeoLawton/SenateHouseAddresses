@@ -18,3 +18,15 @@ for (m in seq_along(senateroot)){
   }
 }
 write.csv(senators,"senators.csv")
+
+tables <- readHTMLTable("http://www.house.gov/representatives/",row.names = NULL)
+
+reps<- dataframe(row.names = NULL)
+for (t in seq_along(tables)) {
+  reps <- rbind(reps, tables[t])
+}
+
+#Convert Room Number to Full address
+#(TO BE COMPLETED)
+
+write.csv(reps, "reps.csv")
