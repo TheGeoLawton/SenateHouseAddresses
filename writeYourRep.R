@@ -27,6 +27,17 @@ for (t in seq_along(tables)) {
 }
 
 #Convert Room Number to Full address
-#(TO BE COMPLETED)
+roomToAddress <- function(room){
+        addresses <- list(CHOB = "Cannon House Office Building
+                                1st & C St SE,
+                                Washington DC 20003",
+                          LHOB = "Longworth House Office Building
+                        240 S Capitol St SE
+                        Washington DC 20003",
+                          RHOB = "Rayburn House Office Building
+                          45 Independence Ave SW,
+                          Washington DC 20515")
+        #lookup room from addresses.
+}
 
 write.csv(reps, "reps.csv")
